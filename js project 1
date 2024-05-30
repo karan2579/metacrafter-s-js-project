@@ -1,14 +1,14 @@
+
 // create a variable to hold your NFT's
 let nfts= [];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (brand_name,founder,flavour,price) {
+function mintNFT (brand_name,founder,price) {
     const nft={
     brand_name : brand_name,
     founder: founder,
-    flavour: flavour,
     price : price
     }
     nfts.push(nft);
@@ -22,7 +22,6 @@ function listNFTs () {
         console.log("NFT number "+ (i+1) +"");
         console.log("Brand Name is " +nfts[i].brand_name);
         console.log("Founder is " +nfts[i].founder);
-        console.log("Flavour is " +nfts[i].flavour);
         console.log("Price is " +nfts[i].price);
         console.log(" ");
         i++;
@@ -36,8 +35,8 @@ function getTotalSupply() {
 
 
 // call your functions below this line
-mintNFT("Amul","Tribhuvandas Kishibhai Patel","Rajbhog","$13");
-mintNFT("Verka","Narinder Singh Shergill","Roasted Peanut","$10");
-mintNFT("Ben & Jerry","Ben Cohen and Jerry Greenfield","Chocolate","$33");
+mintNFT("Amul","Tribhuvandas Kishibhai Patel","$13");
+mintNFT("Verka","Narinder Singh Shergill","$10");
+mintNFT("Ben & Jerry","Ben Cohen and Jerry Greenfield","$33");
 listNFTs();
 getTotalSupply();
